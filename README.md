@@ -58,7 +58,7 @@ m.get_current_version() # -> 0
 
 The test uses a docker container with MySQL and a database named 'mysql_migration_test'.
     
-These a the connection parameters:
+These are the connection parameters:
 
 ```python
 m = MySQLMigrations(migration_dir='migrations', migration_file='.migration')
