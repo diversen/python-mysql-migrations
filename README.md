@@ -60,7 +60,10 @@ The test is using a docker container with MySQL and a database named 'mysql_migr
     
 These a the connection parameters:
 
-    host='localhost', user='root', password='password', database='mysql_migration_test'
+```python
+    m = MySQLMigrations(migration_dir='migrations', migration_file='.migration')
+    m.connect(host='localhost', user='root', password='password', database='mysql_migration_test')
+```
 
 To run the tests:
 
