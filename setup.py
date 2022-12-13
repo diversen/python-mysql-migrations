@@ -4,7 +4,7 @@ setup(
     name='mysql_migrations',
     version='0.0.1',    
     description='Simple way to migrate MySQL',
-    url='https://github.com/diversen/mysql-migration',
+    url='https://github.com/diversen/python-mysql-migrations',
     author='Dennis Iversen',
     author_email='dennis.iversen@gmail.com',
     license='MIT',
