@@ -29,16 +29,29 @@ E.g.:
 
 ## Usage
 
+Always make backups if it is important. 
+
 ```python
 from mysql_migrations import MySQLMigrations
 
-m = MySQLMigration(migration_dir='migrations', migration_file='.migration')
+# The 'migration_file' should be in a .gitignore file if using git
+m = MySQLMigrations(migration_dir='migrations', migration_file='.migration')
 m.connect(host='localhost', user='root', password='password', database='mysql_migration_test')
-m.migrate_up(2) # now version is 2
-m.migrate_down(1) # now version is 1
 
-m.migrate_down() # now version is 0
-m.migrate_up() # now version is 2
+# Executes 0001.sql and 0002.sql The .migration version is 2
+m.migrate_up(2) 
+
+# Excutes 0002.sql. Now version the .migration version is 1
+m.migrate_down(1) 
+
+# 0002.sql is executed. The version .migration is 2
+m.migrate_up()
+
+# Executes 0002.sql and then 0001.sql, The .migration version is 0
+m.migrate_down() 
+
+m.get_current_version() # -> 0
+
 ```
 
 ## License
