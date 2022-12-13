@@ -8,8 +8,11 @@ The main usage is probably to use it if you don't use a ORM, but query the MySQL
 
 ## Install mysql-migration
 
-    pip install mysql-migration
+    pip install git+https://github.com/diversen/python-mysql-migrations
 
+Or using a tag:
+
+    pip install git+https://github.com/diversen/python-mysql-migrations@v0.0.1
 
 ## Create migrations dir
 
