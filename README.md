@@ -13,7 +13,7 @@ It executes files in `migrations/up` and `migrations/down` directories.
 
     mkdir -p migrations/up migrations/down
 
-Add SQL files into `migrations/up` and `migrations/down` directories.
+Add SQL files into `migrations/up` and `migrations/down` directories which can be executed by `mysql`.
 
 E.g.: 
     
@@ -25,7 +25,7 @@ E.g.:
 ## Usage
 
 ```python
-from mysql_migration import MySQLMigration
+from mysql_migrations import MySQLMigrations
 
 m = MySQLMigration(migration_dir='migrations', migration_file='.migration')
 m.connect(host='localhost', user='root', password='password', database='mysql_migration_test')

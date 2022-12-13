@@ -8,4 +8,4 @@ __version__ = "0.0.1"
 __author__ = 'Dennis Iversen'
 __credits__ = '10kilobyte.com'
 
-from .mysql_migration import MySQLMigration
+from .mysql_migrations import MySQLMigrations

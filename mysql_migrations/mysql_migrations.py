@@ -3,7 +3,7 @@ from os.path import exists
 import os
 
 
-class MySQLMigration:
+class MySQLMigrations:
     def __init__(self, migration_dir=None, migration_file=None):
         self.migration_dir = 'migrations'
         self.migration_file = '.migration'
