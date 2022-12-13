@@ -159,6 +159,4 @@ class MySQLMigrations:
         for statement in statements:
             self.execute_query(statement)
 
-        
-
         self.set_current_version(target_version)

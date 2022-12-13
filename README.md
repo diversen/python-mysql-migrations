@@ -2,7 +2,9 @@
 
 Simple python mysql migration tool.
 
-It executes files in `migrations/up` and `migrations/down` directories.
+It executes files with SQL statements in a e.g. `migrations/up` and `migrations/down` directories. 
+
+The main usage is probably to use it if you don't use a ORM, but query the MySQL database directly - maybe using `mysql.connector`.
 
 ## Install mysql-migration
 
@@ -35,3 +37,7 @@ m.migrate_down(1) # now version is 1
 m.migrate_down() # now version is 0
 m.migrate_up() # now version is 2
 ```
+
+## License
+
+[MIT](LICENSE)
