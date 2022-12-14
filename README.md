@@ -12,7 +12,7 @@ The main usage is probably if you don't use a ORM, but query the MySQL database 
 
 Or using a tag:
 
-    pip install git+https://github.com/diversen/python-mysql-migrations@v0.0.1
+    pip install git+https://github.com/diversen/python-mysql-migrations@v0.0.2
 
 ## Create migrations dir
 
@@ -37,16 +37,16 @@ from mysql_migrations import MySQLMigrations
 m = MySQLMigrations(migration_dir='migrations', migration_file='.migration')
 m.connect(host='localhost', user='root', password='password', database='mysql_migration_test')
 
-# Executes 0001.sql and 0002.sql The .migration version is 2
+# Executes 0001.sql and 0002.sql up files. The .migration version is 2
 m.migrate_up(2) 
 
-# Excutes 0002.sql. Now version the .migration version is 1
+# Excutes 0002.sql down. Now version the .migration version is 1
 m.migrate_down(1) 
 
-# 0002.sql is executed. The version .migration is 2
+# Executes 0002.sql up. The version .migration is 2
 m.migrate_up()
 
-# Executes 0002.sql and then 0001.sql, The .migration version is 0
+# Executes 0002.sql and then 0001.sql down files, The .migration version is 0
 m.migrate_down() 
 
 # Get current version

@@ -33,7 +33,7 @@ class TestMySQLMigration(unittest.TestCase):
         up_files = m.get_migration_files('up')
         self.assertEqual(up_files, ['0001.sql', '0002.sql', '0003.sql'])
 
-        down_files = m.get_migration_files('up')
+        down_files = m.get_migration_files('down')
         self.assertEqual(down_files, ['0001.sql', '0002.sql', '0003.sql'])
 
         sql_statments = m.get_sql_statements_from_file('./tests/migrations/up/0001.sql')
