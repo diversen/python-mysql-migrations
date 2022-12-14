@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='mysql_migrations',
-    version='0.0.1',    
+    version='0.0.2',    
     description='Simple way to migrate MySQL',
     url='https://github.com/diversen/python-mysql-migrations',
     author='Dennis Iversen',
